@@ -1,30 +1,35 @@
-import Clients from "@/Components/Clients";
-import Exp from "@/Components/Exp";
-import Footer from "@/Components/Footer";
-import Grid from "@/Components/Grid";
-import Hero from "@/Components/Hero";
-import Project from "@/Components/Project";
-import { FloatingNav } from "@/Components/ui/FloatingNav";
-import { navItems } from "@/data";
-
-
+import Loader from "@/Components/Loader";
+import SmoothScroll from "@/Components/SmoothScroll";
+import TopBar from "@/Components/hud/TopBar";
+import AltitudeMeter from "@/Components/hud/AltitudeMeter";
+import ChapterIndicator from "@/Components/hud/ChapterIndicator";
+import Starfield from "@/Components/space/Starfield";
+import Hero from "@/Components/sections/Hero";
+import About from "@/Components/sections/About";
+import Services from "@/Components/sections/Services";
+import Works from "@/Components/sections/Works";
+import Voices from "@/Components/sections/Voices";
+import Trajectory from "@/Components/sections/Trajectory";
+import Contact from "@/Components/sections/Contact";
 
 export default function Home() {
   return (
-   
-    <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5 ">
-      <div className="max-w-7xl w-full">
-        <FloatingNav
-        navItems={navItems}
-          />
-        <Hero/>
-        <Grid/>
-        <Project />
-        <Clients />
-        <Exp />
-        <Footer/>
-      
-      </div>
-    </main>
+    <SmoothScroll>
+      <div className="noise-overlay" aria-hidden />
+      <TopBar />
+      <AltitudeMeter />
+      <ChapterIndicator />
+      <Loader />
+      <Starfield />
+      <main className="relative">
+        <Hero />
+        <About />
+        <Services />
+        <Works />
+        <Voices />
+        <Trajectory />
+        <Contact />
+      </main>
+    </SmoothScroll>
   );
 }

@@ -1,8 +1,79 @@
 export const navItems = [
   { name: "About", link: "#about" },
-  { name: "Projects", link: "#projects" },
-  { name: "Testimonials", link: "#testimonials" },
+  { name: "Services", link: "#services" },
+  { name: "Projects", link: "#work" },
+  { name: "Testimonials", link: "#voices" },
   { name: "Contact", link: "#contact" },
+];
+
+export const stats = [
+  { value: "10+", label: "Projects built" },
+  { value: "4+", label: "Years coding" },
+  { value: "15+", label: "Technologies" },
+  { value: "100%", label: "Commitment" },
+];
+
+export const skills = [
+  "React",
+  "Next.js",
+  "Node.js",
+  "MongoDB",
+  "Express",
+  "TypeScript",
+  "Tailwind CSS",
+  "Framer Motion",
+  "Three.js",
+  "GSAP",
+  "React Native",
+  "PostgreSQL",
+  "REST APIs",
+  "Git",
+  "Vercel",
+];
+
+export const services = [
+  {
+    id: "01",
+    title: "Frontend Engineering",
+    description:
+      "Pixel-precise, accessible interfaces with React, Next.js and modern CSS — fast on every device.",
+    stack: ["React", "Next.js", "TypeScript", "Tailwind"],
+  },
+  {
+    id: "02",
+    title: "Backend & APIs",
+    description:
+      "Robust server-side logic, REST APIs and database design with the MERN stack.",
+    stack: ["Node.js", "Express", "MongoDB", "JWT"],
+  },
+  {
+    id: "03",
+    title: "Full-Stack Products",
+    description:
+      "End-to-end web apps: auth, payments, dashboards — from idea to production.",
+    stack: ["MERN", "Next.js", "Cloudinary", "Stripe"],
+  },
+  {
+    id: "04",
+    title: "Motion & 3D Web",
+    description:
+      "Immersive scroll experiences, micro-interactions and WebGL moments that people remember.",
+    stack: ["GSAP", "Three.js", "Framer Motion"],
+  },
+  {
+    id: "05",
+    title: "Mobile Apps",
+    description:
+      "Cross-platform mobile applications that share your web product's DNA.",
+    stack: ["React Native", "Expo"],
+  },
+  {
+    id: "06",
+    title: "Deploy & Maintain",
+    description:
+      "CI/CD, performance budgets and ongoing care — your site stays fast after launch.",
+    stack: ["Vercel", "Netlify", "Docker"],
+  },
 ];
 
 export const gridItems = [

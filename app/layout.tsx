@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { ThemeProvider } from "next-themes";
 import localFont from "next/font/local";
 import "./globals.css";
+import { SoundProvider } from "@/Components/SoundProvider";
 
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const spaceGrotesk = localFont({
+  src: "./fonts/SpaceGroteskVF.woff2",
+  variable: "--font-space-grotesk",
+  weight: "300 700",
 });
+
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
@@ -16,8 +16,9 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Kalandhar Portfolio",
-  description: "fast and Best Portfolio",
+  title: "Kalandhar — MERN & Next.js Developer",
+  description:
+    "Portfolio of Kalandhar, a MERN stack and Next.js developer building fast, immersive web experiences.",
 };
 
 export default function RootLayout({
@@ -26,18 +27,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-       <ThemeProvider
-            attribute="class"
-            defaultTheme="dark"
-            enableSystem
-            disableTransitionOnChange
-          >
-            {children}
-          </ThemeProvider>
+    <html lang="en" className="dark">
+      <body className={`${spaceGrotesk.variable} ${geistMono.variable} antialiased`}>
+        <SoundProvider>{children}</SoundProvider>
       </body>
     </html>
   );
